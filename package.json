@@ -10,6 +10,8 @@
         "start": "node dist/index.js",
         "lint": "eslint . --ext .ts",
         "lint:fix": "eslint . --ext .ts --fix",
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
         "docker-build:dev": "docker build -t modern-node-express-app:dev -f Dockerfile.dev .",
         "docker-build:prod": "docker build -t modern-node-express-app:prod -f Dockerfile.prod .",
         "docker-run:dev-win": "docker run -it --rm -d --name modern-node-express-app-dev -v %cd%/src:/app/src:ro -v %cd%/public:/app/public:ro -v /app/node_modules -e NODE_ENV=development -e CHOKIDAR_USEPOLLING=true -p 5000:5000 modern-node-express-app:dev",
@@ -35,6 +37,7 @@
         "concurrently": "^8.2.1",
         "eslint": "^8.49.0",
         "nodemon": "^3.0.1",
+        "prettier": "^3.0.3",
         "typescript": "^5.2.2"
     }
 }
