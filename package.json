@@ -1,5 +1,5 @@
 {
-    "name": "modern-node-express-app",
+    "name": "create-modern-node-app",
     "version": "1.0.0",
     "description": "Modern Node Express App",
     "scripts": {
@@ -12,11 +12,11 @@
         "lint:fix": "eslint . --ext .ts --fix",
         "format": "prettier --write .",
         "format:check": "prettier --check .",
-        "docker-build:dev": "docker build -t modern-node-express-app:dev -f Dockerfile.dev .",
-        "docker-build:prod": "docker build -t modern-node-express-app:prod -f Dockerfile.prod .",
-        "docker-run:dev-win": "docker run -it --rm -d --name modern-node-express-app-dev -v %cd%/src:/app/src:ro -v %cd%/public:/app/public:ro -v /app/node_modules -e NODE_ENV=development -e CHOKIDAR_USEPOLLING=true -p 5000:5000 modern-node-express-app:dev",
-        "docker-run:dev-linux": "docker run -it --rm -d --name modern-node-express-app-dev -v $(pwd)/src:/app/src:ro -v $(pwd)/public:/app/public:ro -v /app/node_modules -e NODE_ENV=development -e CHOKIDAR_USEPOLLING=true -p 5000:5000 modern-node-express-app:dev",
-        "docker-run:prod": "docker run -it --rm -p 5000:5000 --name modern-node-express-app-prod -d -e NODE_ENV=production modern-node-express-app:prod"
+        "docker-build:dev": "docker build -t create-modern-node-app:dev -f Dockerfile.dev .",
+        "docker-build:prod": "docker build -t create-modern-node-app:prod -f Dockerfile.prod .",
+        "docker-run:dev-win": "docker run -it --rm -d --name create-modern-node-app-dev -v %cd%/src:/app/src:ro -v %cd%/public:/app/public:ro -v /app/node_modules -e NODE_ENV=development -e CHOKIDAR_USEPOLLING=true -p 5000:5000 create-modern-node-app:dev",
+        "docker-run:dev-linux": "docker run -it --rm -d --name create-modern-node-app-dev -v $(pwd)/src:/app/src:ro -v $(pwd)/public:/app/public:ro -v /app/node_modules -e NODE_ENV=development -e CHOKIDAR_USEPOLLING=true -p 5000:5000 create-modern-node-app:dev",
+        "docker-run:prod": "docker run -it --rm -p 5000:5000 --name create-modern-node-app-prod -d -e NODE_ENV=production create-modern-node-app:prod"
     },
     "author": "alessandrofoglia07",
     "license": "MIT",
